@@ -54,7 +54,7 @@ py main.py .\example\covid_death.ps
 ```
 
 Árvore de geração utilizada para o exemplo executado:
-![arvore]()
+![arvore](https://raw.githubusercontent.com/jorge-g99/matrixscript-master/master/img/simple_matrix.png)
 
 ## Documentação
 

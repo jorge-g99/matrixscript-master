@@ -13,7 +13,7 @@ class MXLang:
     self.parser.parse(self.lexer.tokenize(text))
 
   def shell(self):
-    print(f'PandasScript {self.version}\nType "help", "copyright" or "license" for more information')
+    print(f'MatrixScript {self.version}\nType "help", "copyright" or "license" for more information')
     while True:
       try:
         text = input("> ")

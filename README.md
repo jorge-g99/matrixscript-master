@@ -10,27 +10,28 @@
   <a href="#exemplo">Exemplo</a> •
   <a href="#documentação">Documentação</a> •
   <a href="#produções-e-ações-semânticas">Produções e Ações Semânticas</a> •
-  <a href="#créditos">Créditos</a> •
-  <a href="#license">License</a>
+  <a href="#créditos">Créditos</a>
 </p>
 
 [![screenshot]('imagem do vídeo')]('link do vídeo')
 
 ## Introdução
-O Pandas Script é uma linguagem simples de alto nível que tem como objetivo simplificar e agilizar a visualização e gerenciamento de dados como CSV.
+O Matrix Script é uma linguagem simples de alto nível que tem como objetivo executar cálculos e visualização de matrizes.
 
 ## Como usar
 
-[Video de apresentação]().
+[Video de apresentação]('link do vídeo').
 
-Para clonar e rodar essa aplicação, você irá precisar [Git](https://git-scm.com), [Python](https://www.python.org/). Pelo seu terminal:
+Antes de clonar e rodar essa aplicação, você irá precisar do [Git](https://git-scm.com) e do [Python](https://www.python.org/) instalado em sua máquina. 
+
+Para clocar o projeto, execute pelo seu terminal:
 
 ```bash
 # Clone o repositório
-git clone https://github.com/jorge-g99/matrixscript
+git clone https://github.com/jorge-g99/matrixscript-master
 
 # Entre no repositório
-cd matrixscript
+cd matrixscript-master
 
 # Instale as dependências
 pip install numpy
@@ -48,9 +49,9 @@ d = a + b * c
 PRINT d
 ```
 
-Rodando o exemplo no terminal:
+Para rodar o exemplo no terminal, execute:
 ```
-py main.py .\example\covid_death.ps
+py main.py .\examples\simple_matrix.mx
 ```
 
 Árvore de geração utilizada para o exemplo executado:
@@ -72,7 +73,7 @@ py main.py .\example\covid_death.ps
 ## Produções e Ações Semânticas
 
 Observações:
-- Tokens em caixa alta para execução dos comandos
+- Tokens em caixa alta para execução dos comandos por convenção da linguagem
 ```bnf
 Grammar                                         Action
 ------------------------                        ---------------------------------
@@ -93,17 +94,11 @@ expr0     : expr1 + expr2                       expr0.val = expr1.val + expr2.va
 
 ## Créditos
 
-Essa aplicação utiliza os seguintes projetos de código aberto:
+Projetos de código aberto utilizados:
 
 - [Python](https://www.python.org/)
 - [Numpy](https://numpy.org/)
 - [SLY](https://github.com/dabeaz/sly)
-
-Inspiração do README [electron-markdownify](https://github.com/amitmerchant1990/electron-markdownify).
-
-## License
-
-MIT
 
 ---
 > GitHub [@jorge-g99](https://github.com/jorge-g99) &nbsp;&middot;&nbsp;

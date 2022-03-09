@@ -1,3 +1,4 @@
+from matplotlib.pyplot import axis
 from sly import Parser
 from lang.MXLexer import MXLexer
 
@@ -9,7 +10,7 @@ class MXParser(Parser):
 
   precedence = (
     ('left' ,PRINT  ,),                          # FUNCTIONS
-    ('left' ,LOAD  ,),                           # FUNCTIONS
+    ('left' ,LOAD  ,RANGE , MAX, LINEMAX, COLUMNMAX, ),                           # FUNCTIONS
     ('left' ,PLUS  ,MINUS ,),                    # OPERATIONS
     ('left' ,TIMES ,DIVIDE,),                    # HIGH PRIORITY OPERATIONS
     ('right',UMINUS,),                           # UNARY OPERATORS
@@ -73,6 +74,27 @@ class MXParser(Parser):
     except LookupError:
       print(f'Undefined name {p.ID!r}')
 
+  # Novos Tokens 
   @_('LOAD STRING')
   def expr(self, p):
     return np.array(eval(p.STRING))
+  
+  @_('RANGE INTEGER INTEGER INTEGER')
+  def expr(self, p):
+    return np.arange(p.INTEGER0, dtype=np.int64).reshape(p.INTEGER1, p.INTEGER2)
+
+  @_('MAX expr')
+  def expr(self, p):
+    return p.expr.max()
+
+  @_('LINEMAX expr')
+  def expr(self, p):
+    return p.expr.max(axis=1)
+  
+  @_('COLUMNMAX expr')
+  def expr(self, p):
+    return p.expr.max(axis=0)
+
+  @_('IDENT INTEGER')
+  def expr(self, p):
+    return np.eye(p.INTEGER0)

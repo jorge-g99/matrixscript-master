@@ -5,9 +5,9 @@ from lang.MXParser import MXParser
 class MXLang:
 
   def __init__(self):
+    self.version = "0.0.1"
     self.lexer   = MXLexer()
     self.parser  = MXParser()
-    self.version = "0.0.1"
 
   def parse(self, text):
     self.parser.parse(self.lexer.tokenize(text))
@@ -16,7 +16,7 @@ class MXLang:
     print(f'MatrixScript {self.version}\nType "help", "copyright" or "license" for more information')
     while True:
       try:
-        text = input("> ")
+        text = input("-> ")
       except EOFError:
         break
       if text:

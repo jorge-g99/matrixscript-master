@@ -9,7 +9,7 @@ class MXLexer(Lexer):
 
   tokens = {
     # KEYWORDS
-    PRINT, LOAD,
+    PRINT, LOAD, RANGE, MAX, LINEMAX, COLUMNMAX, IDENT,
 
     # SYMBOLS = { , | ( | ) }
     LPAREN, RPAREN,
@@ -22,8 +22,13 @@ class MXLexer(Lexer):
   }
 
   # BEGIN TOKEN REGULAR EXPRESSIONS DEFINITION
-  PRINT   = r'PRINT'
-  LOAD    = r'LOAD'
+  PRINT     = r'PRINT'
+  LOAD      = r'LOAD'
+  RANGE     = r'RANGE'
+  MAX       = r'MAX'
+  LINEMAX   = r'LINEMAX'
+  COLUMNMAX = r'COLUMNMAX'
+  IDENT     = r'IDENT'
 
   LPAREN    = r'\('
   RPAREN    = r'\)'

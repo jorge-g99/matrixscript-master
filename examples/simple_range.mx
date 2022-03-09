@@ -1,0 +1,14 @@
+x = "-------------------------------"
+a = RANGE 16 4 4
+b = COLUMNMAX a
+c = LINEMAX a
+d = MAX a
+PRINT x
+PRINT a
+PRINT x
+PRINT b
+PRINT x
+PRINT c
+PRINT x
+PRINT d
+PRINT x

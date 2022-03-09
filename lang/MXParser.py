@@ -74,7 +74,7 @@ class MXParser(Parser):
     except LookupError:
       print(f'Undefined name {p.ID!r}')
 
-  # Novos Tokens 
+  # NEW TOKENS 
   @_('LOAD STRING')
   def expr(self, p):
     return np.array(eval(p.STRING))

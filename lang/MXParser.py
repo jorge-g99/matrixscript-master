@@ -9,11 +9,11 @@ class MXParser(Parser):
   tokens = MXLexer.tokens
 
   precedence = (
-    ('left' ,PRINT  ,),                          # FUNCTIONS
-    ('left' ,LOAD  ,RANGE , MAX, LINEMAX, COLUMNMAX, ),                           # FUNCTIONS
-    ('left' ,PLUS  ,MINUS ,),                    # OPERATIONS
-    ('left' ,TIMES ,DIVIDE,),                    # HIGH PRIORITY OPERATIONS
-    ('right',UMINUS,),                           # UNARY OPERATORS
+    ('left' ,PRINT  ,),                                     # FUNCTIONS
+    ('left' ,LOAD  ,RANGE , MAX, LINEMAX, COLUMNMAX, ),     # FUNCTIONS
+    ('left' ,PLUS  ,MINUS ,),                               # OPERATIONS
+    ('left' ,TIMES ,DIVIDE,),                               # HIGH PRIORITY OPERATIONS
+    ('right',UMINUS,),                                      # UNARY OPERATORS
   )
 
   def __init__(self):

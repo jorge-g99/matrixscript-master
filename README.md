@@ -13,14 +13,14 @@
   <a href="#créditos">Créditos</a>
 </p>
 
-[![screenshot]('imagem do vídeo')]('link do vídeo')
+[![screenshot]('')](https://youtu.be/isLWZqVmVV0)
 
 ## Introdução
 O Matrix Script é uma linguagem simples de alto nível que tem como objetivo executar cálculos e visualização de matrizes.
 
 ## Como usar
 
-[Video de apresentação]('link do vídeo').
+[Video de apresentação](https://youtu.be/isLWZqVmVV0).
 
 Antes de clonar e rodar essa aplicação, você irá precisar do [Git](https://git-scm.com) e do [Python](https://www.python.org/) instalado em sua máquina. 
 

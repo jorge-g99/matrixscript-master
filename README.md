@@ -13,7 +13,7 @@
   <a href="#créditos">Créditos</a>
 </p>
 
-[![screenshot]('')](https://youtu.be/isLWZqVmVV0)
+[![screenshot](https://raw.githubusercontent.com/jorge-g99/matrixscript-master/master/img/capa.png)](https://youtu.be/isLWZqVmVV0)
 
 ## Introdução
 O Matrix Script é uma linguagem simples de alto nível que tem como objetivo executar cálculos e visualização de matrizes.
@@ -90,6 +90,10 @@ expr0     : expr1 + expr2                       expr0.val = expr1.val + expr2.va
           | STRING                              expr0.val = string(STRING.val)
           | ID                                  self.ids[ID.val]
           | LOAD STRING                         expr0.val = np.array(eval(STRING.val))
+          | RANGE INTEGER INTEGER INTEGER       expr0.val = np.arange(p.INT0, dtype=np.int64).reshape(p.INT1, p.INT2)
+          | MAX                                 expr0.val = expr1.max()
+          | COLUMNMAX                           expr0.val = expr1.max(axis=0)
+          | LINEMAX                             expr0.val = expr1.max(axis=1)
 ```
 
 ## Créditos
